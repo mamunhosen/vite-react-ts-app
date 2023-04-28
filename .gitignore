@@ -29,3 +29,7 @@ dist-ssr
 # Vite-specific files
 .cache/
 .esbuild/
+
+# Vite test files
+/__tests__/
+/*.spec.ts
