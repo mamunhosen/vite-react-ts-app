@@ -1,5 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 }
 
-export default App;
+function WrappedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export { WrappedApp as default, App };
